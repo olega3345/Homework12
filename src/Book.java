@@ -1,19 +1,17 @@
 public class Book {
-    Book book = new Book("J.K. Rowling", "Harry Potter", 1997);
-    private String title;
-    private String author;
-    private int yearPublishing;
-
-    public Book(String author, String title, int yearPublishing) {
-        this.author = author;
+     private final String title;
+     private final Author author;
+     private int yearPublishing;
+    public Book(String title, Author author, int yearPublishing) {
         this.title = title;
+        this.author = author;
         this.yearPublishing = yearPublishing;
-    }
-    public String getAuthor() {
-        return author;
     }
     public String getTitle() {
         return title;
+    }
+    public Author getAuthor() {
+        return author;
     }
     public int getYearPublishing() {
         return yearPublishing;
@@ -22,19 +20,5 @@ public class Book {
         this.yearPublishing = yearPublishing;
     }
 }
-class Author {
-    Author author = new Author("Joan", "Rowling");
-    String name;
-    String surname;
-    public Author(String name, String surname) {
-        this.name = name;
-        this.surname = surname;
-    }
-    public String getName() {
-        return name;
-    }
-    public String getSurname() {
-        return surname;
-    }
-}
+
 
